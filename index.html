@@ -1734,6 +1734,145 @@
         }
     </style>
 
+    <style>
+        /* Mobile optimizations for Top News Section */
+@media (max-width: 767px) {
+    /* Section padding adjustments */
+    #top-news {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* Header spacing */
+    #top-news .mb-12 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Heading size adjustments */
+    #top-news h2 {
+        font-size: 1.875rem; /* text-3xl instead of text-4xl */
+    }
+    
+    #top-news p.text-xl {
+        font-size: 1rem;
+    }
+    
+    /* Featured news cards */
+    #top-news .news-card-modern {
+        margin-bottom: 1rem;
+    }
+    
+    /* Image container height adjustment */
+    #top-news .news-image-container {
+        padding-bottom: 66.67%; /* 3:2 aspect ratio instead of 16:9 */
+    }
+    
+    /* Title and content in overlay */
+    #top-news .absolute.bottom-6 {
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+    
+    #top-news .absolute.bottom-6 h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #top-news .absolute.bottom-6 p {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Tag positioning */
+    #top-news .absolute.top-6 {
+        top: 0.75rem;
+        left: 0.75rem;
+    }
+    
+    /* Card content spacing */
+    #top-news .news-card-content {
+        padding: 1rem;
+    }
+    
+    /* Side news cards */
+    #top-news .lg\:col-span-5 .news-card-modern {
+        margin-bottom: 1rem;
+    }
+    
+    #top-news .lg\:col-span-5 h4 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #top-news .lg\:col-span-5 p {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Button and metadata adjustments */
+    #top-news .btn-modern {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    #top-news .flex-col.sm\:flex-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    #top-news .text-sm.text-gray-500 {
+        font-size: 0.75rem;
+    }
+    
+    /* Bottom button */
+    #top-news .mt-12 {
+        margin-top: 1.5rem;
+    }
+    
+    /* Stacked card layout for mobile */
+    #top-news .grid.lg\:grid-cols-12 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Spacing between cards */
+    #top-news .lg\:col-span-7,
+    #top-news .lg\:col-span-5 {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Single column for featured cards */
+    #top-news .lg\:col-span-7 .grid.grid-cols-1 {
+        gap: 1rem;
+    }
+    
+    /* Show only first featured card on smallest screens */
+    @media (max-width: 480px) {
+        #top-news .lg\:col-span-7 .grid.grid-cols-1 .news-card-modern:nth-child(2) {
+            display: none;
+        }
+    }
+    
+    /* Improve card shadow and spacing */
+    #top-news .news-card-modern {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Simplify metadata on small screens */
+    @media (max-width: 480px) {
+        #top-news .flex.items-center.flex-wrap.gap-2 span:nth-child(5),
+        #top-news .flex.items-center.flex-wrap.gap-2 span:nth-child(6) {
+            display: none;
+        }
+    }
+}
+    </style>
     <!-- Top News Section -->
     <section class="section-white py-20" id="top-news">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -3086,12 +3225,12 @@
     </section>
 
 
-    <!-- Email Capture - ENHANCED WITH ANGULAR CUTS -->
+    <!-- Email Capture with Background Image -->
     <section class="signup-section py-20" id="signup">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
             <!-- Angular element in background -->
             <div class="angular-bg-element top-right"></div>
-
+    
             <div class="max-w-4xl mx-auto text-center mb-12 fade-up">
                 <h2 class="text-4xl font-bold text-white mb-6 font-poppins">Get Breaking ASX Alerts Direct to Your Inbox
                 </h2>
@@ -3100,7 +3239,7 @@
                     the market.
                 </p>
             </div>
-
+    
             <div class="max-w-3xl mx-auto fade-up">
                 <div class="signup-card p-10">
                     <div class="text-center mb-8">
@@ -3108,7 +3247,7 @@
                         </h3>
                         <p class="text-gray-600">Join 250,000+ monthly readers receiving market-moving insights</p>
                     </div>
-
+    
                     <div class="flex flex-col sm:flex-row gap-4 mb-6">
                         <div class="relative flex-1">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -3123,7 +3262,7 @@
                             <input type="text" placeholder="Last Name" class="form-input w-full pl-10">
                         </div>
                     </div>
-
+    
                     <div class="mb-6">
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -3132,12 +3271,12 @@
                             <input type="email" placeholder="Email Address" class="form-input w-full pl-10">
                         </div>
                     </div>
-
+    
                     <div class="mb-8">
                         <div class="flex items-start mb-4">
                             <div class="flex items-center h-5">
-                                <input id="industry" type="checkbox" value=""
-                                    class="w-4 h-4 border border-gray-300 rounded" checked>
+                                <input id="industry" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded"
+                                    checked>
                             </div>
                             <label for="industry" class="ml-2 text-sm font-medium text-gray-600">
                                 <i class="fas fa-microchip text-blue-500 mr-1"></i> Technology & Innovation
@@ -3145,8 +3284,8 @@
                         </div>
                         <div class="flex items-start mb-4">
                             <div class="flex items-center h-5">
-                                <input id="biotech" type="checkbox" value=""
-                                    class="w-4 h-4 border border-gray-300 rounded" checked>
+                                <input id="biotech" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded"
+                                    checked>
                             </div>
                             <label for="biotech" class="ml-2 text-sm font-medium text-gray-600">
                                 <i class="fas fa-dna text-green-600 mr-1"></i> Biotech & Healthcare
@@ -3171,14 +3310,13 @@
                             </label>
                         </div>
                     </div>
-
+    
                     <button class="btn-modern w-full py-4 text-lg font-poppins">
                         <i class="fas fa-bell mr-2"></i> Get Free Alerts
                     </button>
-
+    
                     <p class="text-center text-gray-500 mt-6 text-sm">
-                        By signing up, you agree to our <a href="#"
-                            class="text-orange-600 hover:text-orange-700">Privacy
+                        By signing up, you agree to our <a href="#" class="text-orange-600 hover:text-orange-700">Privacy
                             Policy</a> and <a href="#" class="text-orange-600 hover:text-orange-700">Terms of
                             Service</a>.
                         Unsubscribe anytime.
@@ -3187,6 +3325,56 @@
             </div>
         </div>
     </section>
+    
+    <style>
+        /* Background image for signup section */
+        .signup-section {
+            background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 100px;
+            margin-top: -40px;
+        }
+    
+        /* Dark overlay for text readability */
+        .signup-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+    
+        /* Keep container above overlay */
+        .signup-section .container {
+            position: relative;
+            z-index: 2;
+        }
+    
+        /* Keep existing card styling */
+        .signup-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .signup-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-navy);
+        }
+    </style>
 
     <!-- Partner Zone - UPDATED WITH ANGULAR CUTS -->
     <section class="bg-gray-50 py-20" id="partners">
@@ -3268,6 +3456,89 @@
             </div>
         </div>
     </section>
+
+    <style>
+        /* Mobile-specific footer styling - centers all content */
+@media (max-width: 767px) {
+    /* Change footer grid to single column */
+    footer .grid.lg\:grid-cols-5 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Center all text content */
+    footer .lg\:col-span-2,
+    footer h4,
+    footer ul,
+    footer p,
+    footer .text-gray-400,
+    footer .flex.items-center {
+        text-align: center;
+    }
+    
+    /* Center the logo */
+    footer .logo-container {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center description text */
+    footer .text-xl.text-gray-300.mb-10 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+    
+    /* Center social icons */
+    footer .flex.space-x-4 {
+        justify-content: center;
+    }
+    
+    /* Center all navigation lists */
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer ul li {
+        width: auto;
+    }
+    
+    /* Fix icon alignment in links */
+    footer ul a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Bottom section with copyright */
+    footer .flex.flex-col.lg\:flex-row {
+        text-align: center;
+    }
+    
+    footer .flex.items-center.space-x-4 {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    /* Add some spacing between footer sections */
+    footer .lg\:col-span-2,
+    footer .lg\:col-span-1 {
+        margin-bottom: 2rem;
+    }
+    
+    /* Bottom copyright section */
+    footer .border-t.border-gray-700 {
+        text-align: center;
+    }
+    
+    footer .border-t.border-gray-700 p {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+    </style>
 
     <!-- Footer - UPDATED WITH BRAND GUIDELINES -->
     <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
