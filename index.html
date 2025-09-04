@@ -1594,106 +1594,147 @@
     </div>
 
     <!-- Hero Section - KEEPING ORIGINAL EXACTLY -->
+    <!-- Hero Section - MOBILE OPTIMIZED -->
     <section class="relative">
-        <div class="hero-image w-full bg-cover bg-center" style="background-image: url('hero.png');height: 700px;">
+        <div class="hero-image w-full bg-cover bg-center" style="background-image: url('hero.png');">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="container mx-auto px-4 h-full flex items-center">
                 <div class="relative z-10 max-w-3xl">
-                    <h5 class="text-orange-400 text-lg mb-4 tracking-widest reveal font-poppins font-semibold">
+                    <h5
+                        class="text-orange-400 text-sm md:text-lg mb-2 md:mb-4 tracking-widest reveal font-poppins font-semibold">
                         AI-POWERED ASX FINANCIAL MEDIA</h5>
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 reveal">
+                    <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-3 md:mb-6 reveal">
                         <span class="split-text">Insights at the</span><br>
                         <span class="split-text">Speed of Markets</span>
                     </h1>
-                    <p class="text-white text-lg mb-8 reveal">Breaking ASX news across technology, biotech, healthcare,
+                    <p class="text-white text-sm md:text-lg mb-4 md:mb-8 reveal max-w-sm md:max-w-none">Breaking ASX news
+                        across technology, biotech, healthcare,
                         industrials, and financials. Trusted by 250,000+ monthly readers and ASX-listed companies.</p>
-
-                    <!-- Search Bar -->
-                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 mb-8 reveal">
-                        <div class="flex items-center space-x-4">
-                            <input type="text" placeholder="Search ASX companies or tickers..."
-                                class="flex-1 bg-transparent text-white placeholder-white/70 outline-none text-lg">
+    
+                    <!-- Search Bar - Mobile Optimized -->
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 mb-4 md:mb-8 reveal">
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <input type="text" placeholder="Search ASX companies..."
+                                class="flex-1 bg-transparent text-white placeholder-white/70 outline-none text-sm md:text-lg">
                             <button
-                                class="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition-colors"
+                                class="bg-orange-500 text-white px-3 md:px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition-colors text-sm md:text-base"
                                 style="background-color: var(--primary-orange);">
-                                <i class="fas fa-search mr-2"></i>Search
+                                <i class="fas fa-search mr-1 md:mr-2"></i><span class="hidden sm:inline">Search</span>
                             </button>
                         </div>
                     </div>
-
-                    <div class="flex flex-col sm:flex-row gap-4 reveal">
-                        <a href="#signup" class="button-primary">
-                            <i class="fas fa-bell mr-2"></i>Get Free Alerts
+    
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 reveal">
+                        <a href="#signup" class="button-primary text-sm md:text-base text-center py-2 md:py-3 px-4 md:px-8">
+                            <i class="fas fa-bell mr-1 md:mr-2"></i>Get Free Alerts
                         </a>
                         <a href="#partners"
-                            class="text-white border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-300">
-                            <i class="fas fa-handshake mr-2"></i>See Membership Options
+                            class="text-white border border-white px-4 md:px-8 py-2 md:py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-300 text-sm md:text-base text-center">
+                            <i class="fas fa-handshake mr-1 md:mr-2"></i><span
+                                class="hidden xs:inline">Membership</span><span class="hidden sm:inline"> Options</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-
+    
         <!-- Scrolling Ticker -->
-        <div class="py-8" style="background-color: var(--primary-navy);">
+        <div class="py-4 md:py-8" style="background-color: var(--primary-navy);">
             <div class="marquee">
                 <div class="marquee-content">
-                    <div class="flex items-center space-x-20 px-10">
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">ASX200</span>
-                            <span class="text-white">7,234.50</span>
-                            <span class="price-up">+58.2 (+0.81%)</span>
+                    <div class="flex items-center space-x-10 md:space-x-20 px-4 md:px-10">
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">ASX200</span>
+                            <span class="text-white text-xs md:text-base">7,234.50</span>
+                            <span class="price-up text-xs md:text-base">+58.2</span>
                         </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">BHP.AX</span>
-                            <span class="text-white">$42.89</span>
-                            <span class="price-up">+0.51 (+1.20%)</span>
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">BHP.AX</span>
+                            <span class="text-white text-xs md:text-base">$42.89</span>
+                            <span class="price-up text-xs md:text-base">+0.51</span>
                         </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">CBA.AX</span>
-                            <span class="text-white">$105.67</span>
-                            <span class="price-up">+0.53 (+0.50%)</span>
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">CBA.AX</span>
+                            <span class="text-white text-xs md:text-base">$105.67</span>
+                            <span class="price-up text-xs md:text-base">+0.53</span>
                         </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">WBC.AX</span>
-                            <span class="text-white">$23.45</span>
-                            <span class="price-down">-0.05 (-0.21%)</span>
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">WBC.AX</span>
+                            <span class="text-white text-xs md:text-base">$23.45</span>
+                            <span class="price-down text-xs md:text-base">-0.05</span>
                         </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">TLS.AX</span>
-                            <span class="text-white">$4.12</span>
-                            <span class="price-up">+0.07 (+1.73%)</span>
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">TLS.AX</span>
+                            <span class="text-white text-xs md:text-base">$4.12</span>
+                            <span class="price-up text-xs md:text-base">+0.07</span>
                         </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">RIO.AX</span>
-                            <span class="text-white">$118.94</span>
-                            <span class="price-down">-1.23 (-1.02%)</span>
-                        </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">WOW.AX</span>
-                            <span class="text-white">$37.82</span>
-                            <span class="price-up">+0.28 (+0.75%)</span>
-                        </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">FMG.AX</span>
-                            <span class="text-white">$19.87</span>
-                            <span class="price-up">+0.34 (+1.74%)</span>
-                        </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">ANZ.AX</span>
-                            <span class="text-white">$28.91</span>
-                            <span class="price-neutral">+0.00 (0.00%)</span>
-                        </div>
-                        <div class="flex items-center space-x-2 whitespace-nowrap">
-                            <span class="text-slate-300">NAB.AX</span>
-                            <span class="text-white">$35.42</span>
-                            <span class="price-down">-0.18 (-0.50%)</span>
+                        <div class="flex items-center space-x-1 md:space-x-2 whitespace-nowrap">
+                            <span class="text-slate-300 text-xs md:text-base">RIO.AX</span>
+                            <span class="text-white text-xs md:text-base">$118.94</span>
+                            <span class="price-down text-xs md:text-base">-1.23</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Add this CSS to your existing styles section -->
+    <style>
+        /* Responsive hero section */
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 70vh !important;
+                /* Reduce height on mobile */
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+                /* Adjust clip path */
+            }
+    
+            .button-primary {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+    
+            /* Optimize marquee for mobile */
+            .ticker-container {
+                height: 40px;
+            }
+    
+            .ticker-item {
+                margin-right: 1.5rem;
+                padding: 0 0.5rem;
+            }
+    
+            /* Adjust animation speed for mobile */
+            @keyframes scroll-smooth {
+                0% {
+                    transform: translate3d(100vw, 0, 0);
+                }
+    
+                100% {
+                    transform: translate3d(-200%, 0, 0);
+                }
+            }
+    
+            /* Extra small screens */
+            @media (max-width: 375px) {
+                .hero-image {
+                    height: 60vh !important;
+                }
+    
+                .marquee-content>div {
+                    gap: 8px;
+                }
+            }
+        }
+    
+        /* Add utility class for extra small screens */
+        @media (min-width: 376px) {
+            .xs\:inline {
+                display: inline;
+            }
+        }
+    </style>
 
     <!-- Top News Section -->
     <section class="section-white py-20" id="top-news">
